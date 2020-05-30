@@ -1,0 +1,10 @@
+Feature: Get Agent details from the API
+  Scenario: User calls API to get Agent details from AgentCode 
+    Given a Agent  exists with an AgentCode of 9781451648546
+    When a user retrieves the AgentDetails by API
+    Then the respose status code is 200
+    And response includes the following
+	| totalItems 	 	| 1 				|
+	| kind				| books#volumes		|	
+   
+
